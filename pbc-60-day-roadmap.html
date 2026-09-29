@@ -1,0 +1,1953 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="60-Day PBC Interview Preparation Roadmap — DSA, HLD, LLD and Agentic AI">
+<title>60-Day PBC Interview Roadmap</title>
+<style>
+:root {
+  --bg:#0b1020; --panel:#11182a; --panel2:#172137; --text:#e9eef8; --muted:#9aa8bd;
+  --accent:#7c9cff; --accent2:#54d6b5; --border:#26334e; --danger:#ff7184;
+  --shadow:0 12px 35px rgba(0,0,0,.22);
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {margin:0;background:linear-gradient(180deg,#09101d 0,#0b1020 40%,#0c1323 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a {color:#a9bcff;text-decoration:none}
+a:hover {text-decoration:underline}
+button,input {font:inherit}
+.container {max-width:1200px;margin:auto;padding:0 22px}
+header.hero {padding:54px 0 30px;border-bottom:1px solid var(--border)}
+.eyebrow {color:var(--accent2);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+h1 {font-size:clamp(2rem,5vw,4rem);line-height:1.05;margin:10px 0 12px;max-width:850px}
+.subtitle {color:var(--muted);font-size:1.05rem;max-width:800px}
+.toolbar {display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+button,.btn {border:1px solid var(--border);background:var(--panel2);color:var(--text);padding:10px 14px;border-radius:10px;cursor:pointer}
+button:hover,.btn:hover {border-color:#50658e;text-decoration:none}
+.btn-primary {background:var(--accent);color:#081021;border-color:transparent;font-weight:800}
+.stats {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+.stat {background:rgba(17,24,42,.86);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.stat b {font-size:1.55rem;display:block}
+.stat span {color:var(--muted);font-size:.85rem}
+.progress {height:8px;background:#202b42;border-radius:99px;overflow:hidden;margin-top:10px}
+.progress > div {height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .25s}
+nav {position:sticky;top:0;z-index:10;background:rgba(9,16,29,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner {display:flex;gap:6px;overflow:auto;padding:10px 0}
+.nav-inner a {white-space:nowrap;padding:8px 12px;border-radius:8px;color:var(--muted)}
+.nav-inner a:hover {background:var(--panel2);color:var(--text);text-decoration:none}
+section {padding:38px 0}
+.section-title {display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:18px}
+.section-title h2 {margin:0;font-size:1.8rem}
+.section-title p {margin:0;color:var(--muted)}
+.panel {background:rgba(17,24,42,.75);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.note {padding:14px 16px;border-left:3px solid var(--accent);background:#121c30;border-radius:8px;color:#c8d2e3;margin:15px 0}
+.table-wrap {overflow:auto;border:1px solid var(--border);border-radius:12px}
+table {border-collapse:collapse;width:100%;min-width:760px}
+th,td {padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th {background:#18223a;color:#cbd7ec;font-size:.85rem}
+td {color:#d5ddec}
+tr:last-child td {border-bottom:0}
+.resource-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.resource-card {background:var(--panel);border:1px solid var(--border);padding:18px;border-radius:14px}
+.resource-card h3 {margin:7px 0;font-size:1.05rem}
+.resource-card p {margin:0 0 8px;color:#c4cedf}
+.resource-card small {color:var(--muted)}
+.tag {display:inline-block;font-size:.72rem;font-weight:800;color:#9fb1d2;background:#1a2740;border-radius:999px;padding:4px 8px}
+.resource-link {color:#b5c5ff}
+.design-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.design-card {display:grid;grid-template-columns:42px 1fr;gap:14px;background:var(--panel);border:1px solid var(--border);padding:16px;border-radius:14px}
+.number {width:36px;height:36px;border-radius:10px;background:#1c2b4a;display:grid;place-items:center;font-weight:900;color:#b9c8ff}
+.design-card h3 {margin:0 0 5px}
+.concepts {color:var(--muted);margin:0 0 13px}
+.inline-check,.check-row {display:flex;gap:10px;align-items:flex-start;color:#dce4f1}
+input[type=checkbox] {width:18px;height:18px;margin-top:3px;accent-color:var(--accent);cursor:pointer;flex:0 0 auto}
+.day-toolbar {display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+#search {flex:1;min-width:240px;background:var(--panel);color:var(--text);border:1px solid var(--border);padding:11px 13px;border-radius:10px;outline:none}
+.day-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.day-card {background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px}
+.day-card.done {border-color:#2e927e;background:#10221f}
+.day-head {display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:12px}
+.day-head h3 {margin:3px 0 0}
+.day-number {font-size:.72rem;font-weight:900;color:var(--accent2);letter-spacing:.08em}
+.hours {font-size:.8rem;color:#a9b8cf;background:#1a2740;padding:4px 8px;border-radius:999px}
+.task {padding:10px 0;border-top:1px solid #222e46}
+.task label {display:flex;gap:10px;align-items:flex-start}
+.task b {color:#b8c7e8}
+.check-card {background:var(--panel);border:1px solid var(--border);padding:18px;border-radius:14px}
+.check-card h3 {margin-top:0}
+.check-row {padding:9px 0;border-bottom:1px solid #222e46}
+.check-row:last-child {border-bottom:0}
+.two-col {display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+footer {padding:35px 0 60px;color:var(--muted);text-align:center}
+.hidden {display:none!important}
+.kbd {font-size:.75rem;color:#9eb0cc;background:#18233a;border:1px solid var(--border);padding:2px 6px;border-radius:5px}
+@media(max-width:850px) {
+  .stats,.resource-grid,.design-grid,.day-grid,.two-col {grid-template-columns:1fr}
+  .container {padding:0 15px}
+  header.hero {padding-top:35px}
+}
+@media print {
+  nav,.toolbar,.day-toolbar,.btn,.kbd {display:none!important}
+  body {background:white;color:#111}
+  .panel,.resource-card,.design-card,.day-card,.check-card,.stat {box-shadow:none;border:1px solid #bbb;background:white;color:#111}
+  a {color:#111}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">PBC 2026 · 60-Day Preparation</div>
+    <h1>DSA + HLD + LLD + Agentic AI</h1>
+    <p class="subtitle">30 Sep 2026 → 28 Nov 2026 · An interactive version of the roadmap. Checkboxes are saved locally in your browser, so the page works as a static GitHub Pages site with no backend.</p>
+    <div class="toolbar">
+      <button class="btn-primary" onclick="window.print()">Print</button>
+      <button onclick="exportProgress()">Export progress</button>
+      <label class="btn" for="importFile">Import progress</label>
+      <input id="importFile" type="file" accept=".json" hidden onchange="importProgress(event)">
+      <button onclick="resetProgress()">Reset all progress</button>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="doneCount">0</b><span>Completed tasks</span><div class="progress"><div id="overallBar"></div></div></div>
+      <div class="stat"><b id="totalCount">0</b><span>Total checkboxes</span></div>
+      <div class="stat"><b id="dayCount">0 / 60</b><span>Days fully completed</span></div>
+      <div class="stat"><b id="percent">0%</b><span>Overall progress</span></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#resources">Resources</a>
+    <a href="#plan">60-Day Plan</a>
+    <a href="#hld">HLD</a>
+    <a href="#lld">LLD</a>
+    <a href="#agentic">Agentic AI</a>
+    <a href="#checklists">Interview Checklists</a>
+  </div>
+</nav>
+
+<main class="container">
+<section id="overview">
+  <div class="section-title"><div><h2>How to use this plan</h2><p>The schedule is intentionally sustainable around a full-time workday.</p></div></div>
+  <div class="panel">
+    <p><b>Baseline:</b> about 15–16 focused hours/week — 90 minutes on weekdays and about 4 hours/day on weekends.</p>
+    <p><b>DSA:</b> continuous practice using Striver A2Z as the backbone, plus LeetCode/pattern-wise practice and weekly contests.</p>
+    <p><b>System design:</b> learn concept → attempt design → explain aloud → review → redesign.</p>
+    <p><b>Agentic AI:</b> concept → code → small implementation. Do not attempt to finish every overlapping course end-to-end.</p>
+    <p><b>Interview habit:</b> for every problem/design, practice explaining the reasoning, trade-offs, complexity and failure modes rather than only consuming videos.</p>
+    
+<div class="note">
+  <b>Link preservation:</b> the links explicitly supplied with the roadmap are clickable below.
+  The screenshot also shows link icons for some other resources, but their actual URLs were not provided
+  in the message, so this page does not invent them.
+</div>
+
+    <div class="table-wrap"><table><thead><tr><th>Area</th><th>Recommended 60-day effort</th><th>What &#x27;done&#x27; means</th><th>Priority</th></tr></thead><tbody><tr><td>DSA</td><td>~45–50 h</td><td>Consistent A2Z/LeetCode practice, pattern recognition, TC/SC, dry runs and weekly contests</td><td>Daily</td></tr><tr><td>HLD</td><td>~25–30 h</td><td>Core concepts + all 10 roadmap questions practiced at interview depth</td><td>High</td></tr><tr><td>LLD</td><td>~25–30 h</td><td>SOLID/design patterns + all roadmap questions + Java implementation</td><td>High</td></tr><tr><td>Agentic AI</td><td>~25–30 h</td><td>Core concepts + LangChain/LangGraph + selected hands-on modules/projects</td><td>Targeted</td></tr><tr><td>Mock/revision</td><td>~10 h</td><td>Timed DSA + HLD/LLD mocks + weak-area revision</td><td>Final phase</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="resources">
+  <div class="section-title"><div><h2>Resource library</h2><p>Clickable URLs below are the exact links supplied with the roadmap.</p></div></div>
+  <div class="resource-grid">
+    
+      <article class="resource-card">
+        <div class="tag">DSA</div>
+        <h3><a class="resource-link" href="https://takeuforward.org/prep-hub/strivers-a2z-dsa-sheet" target="_blank" rel="noopener">Striver A2Z DSA Sheet ↗</a></h3>
+        <p>Primary DSA roadmap and problem sequence</p>
+        <small>User-provided link</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">Agentic AI</div>
+        <h3><a class="resource-link" href="https://youtu.be/Zy7EXDONlTY?si=7QIhH9vmXV2JSOwB" target="_blank" rel="noopener">Agentic AI course – YouTube ↗</a></h3>
+        <p>Agentic AI overview/course</p>
+        <small>User-provided link</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">Agentic AI</div>
+        <h3><a class="resource-link" href="https://www.udemy.com/course/complete-agentic-ai-bootcamp-with-langgraph-and-langchain/?srsltid=AfmBOoodtU0dhNhKzcdPaGNtlNjJ7Gz6hjd5ZxQvIn8XIPR2OUkOxm77&amp;couponCode=MT260928G1A" target="_blank" rel="noopener">Krish Naik – Complete Agentic AI Bootcamp ↗</a></h3>
+        <p>Primary structured Agentic AI resource; use selectively</p>
+        <small>45h 40m currently listed</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">Agentic AI</div>
+        <h3><a class="resource-link" href="https://youtu.be/rV3HJ4LEZ7k?si=HVs5BDDH8cKbGSKZ" target="_blank" rel="noopener">Krish Naik – 11-hour YouTube course ↗</a></h3>
+        <p>Supplement/revision when a concept needs another explanation</p>
+        <small>User-provided link</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">Agentic AI</div>
+        <h3>Free Agentic AI Complete A2Z – 24h</h3>
+        <p>Optional reference; avoid duplicate introductory modules</p>
+        <small>Link shown in roadmap; URL not supplied</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">HLD</div>
+        <h3>Concept &amp; Coding – HLD</h3>
+        <p>Concept foundation and interview-oriented system design</p>
+        <small>Creator playlist link</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">HLD</div>
+        <h3><a class="resource-link" href="https://youtube.com/playlist?list=PLRtLu6rCuAlkO-HiER3AKoKkSG5DPp9TX&amp;si=9H7rUhbSWMZLF9VK" target="_blank" rel="noopener">TechPrep – Interview Centric Problems ↗</a></h3>
+        <p>Interview-centric practice/reference</p>
+        <small>User-provided link</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">LLD</div>
+        <h3>Prateek Narang – Design Patterns</h3>
+        <p>Design patterns, SOLID and LLD foundation</p>
+        <small>Current Udemy course</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">LLD</div>
+        <h3>Concept &amp; Coding – LLD</h3>
+        <p>Patterns and LLD problem practice</p>
+        <small>Creator playlist link</small>
+      </article>
+    
+      <article class="resource-card">
+        <div class="tag">LLD</div>
+        <h3>Rate your code with ChatGPT</h3>
+        <p>Review and improve each implementation</p>
+        <small>Roadmap instruction</small>
+      </article>
+    
+  </div>
+</section>
+
+<section id="plan">
+  <div class="section-title">
+    <div><h2>60-Day Daily Plan</h2><p>Each day has two independently trackable tasks.</p></div>
+  </div>
+  <div class="day-toolbar">
+    <input id="search" type="search" placeholder="Search by day, date, DSA topic, HLD, LLD or Agentic AI topic…" oninput="filterDays()">
+    <button onclick="showOnlyIncomplete()">Show incomplete</button>
+    <button onclick="showAllDays()">Show all</button>
+  </div>
+  <div class="day-grid" id="dayGrid">
+    
+      <article class="day-card" data-day="1" data-search="1 30 sep wed dsa (45m): arrays + complexity — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld fundamentals: requirements + nfrs; agentic ai: overview">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 1</span>
+            <h3>30 Sep · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-1-dsa">
+            <span><b>DSA</b><br>Arrays + complexity — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-1-primary">
+            <span><b>Primary</b><br>HLD fundamentals: requirements + NFRs; Agentic AI: overview</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="2" data-search="2 01 oct thu dsa (45m): hashing — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: back-of-envelope estimation">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 2</span>
+            <h3>01 Oct · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-2-dsa">
+            <span><b>DSA</b><br>Hashing — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-2-primary">
+            <span><b>Primary</b><br>HLD: back-of-envelope estimation</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="3" data-search="3 02 oct fri dsa (45m): two pointers — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: agents vs agentic ai + tools">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 3</span>
+            <h3>02 Oct · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-3-dsa">
+            <span><b>DSA</b><br>Two pointers — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-3-primary">
+            <span><b>Primary</b><br>Agentic AI: agents vs agentic AI + tools</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="4" data-search="4 03 oct sat dsa (2h): sliding window — 1–2 focused problems; tc/sc; dry-run. primary (2h): hld: basic architecture flow">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 4</span>
+            <h3>03 Oct · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-4-dsa">
+            <span><b>DSA</b><br>Sliding window — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-4-primary">
+            <span><b>Primary</b><br>HLD: basic architecture flow</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="5" data-search="5 04 oct sun dsa (2h): linked lists — 1–2 focused problems; tc/sc; dry-run. primary (2h): agentic ai: langchain/langgraph basics">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 5</span>
+            <h3>04 Oct · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-5-dsa">
+            <span><b>DSA</b><br>Linked lists — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-5-primary">
+            <span><b>Primary</b><br>Agentic AI: LangChain/LangGraph basics</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="6" data-search="6 05 oct mon dsa (45m): stacks/queues — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: messaging app – requirements + architecture">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 6</span>
+            <h3>05 Oct · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-6-dsa">
+            <span><b>DSA</b><br>Stacks/queues — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-6-primary">
+            <span><b>Primary</b><br>HLD: Messaging App – requirements + architecture</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="7" data-search="7 06 oct tue dsa (45m): binary search — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld foundation: oop/solid review">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 7</span>
+            <h3>06 Oct · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-7-dsa">
+            <span><b>DSA</b><br>Binary search — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-7-primary">
+            <span><b>Primary</b><br>LLD foundation: OOP/SOLID review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="8" data-search="8 07 oct wed dsa (45m): recursion — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: langgraph state/workflows">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 8</span>
+            <h3>07 Oct · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-8-dsa">
+            <span><b>DSA</b><br>Recursion — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-8-primary">
+            <span><b>Primary</b><br>Agentic AI: LangGraph state/workflows</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="9" data-search="9 08 oct thu dsa (45m): sorting — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: messaging app deep dive">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 9</span>
+            <h3>08 Oct · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-9-dsa">
+            <span><b>DSA</b><br>Sorting — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-9-primary">
+            <span><b>Primary</b><br>HLD: Messaging App deep dive</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="10" data-search="10 09 oct fri dsa (45m): trees/bst — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: tool calling + structured output">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 10</span>
+            <h3>09 Oct · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-10-dsa">
+            <span><b>DSA</b><br>Trees/BST — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-10-primary">
+            <span><b>Primary</b><br>Agentic AI: tool calling + structured output</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="11" data-search="11 10 oct sat dsa (2h): heaps — 1–2 focused problems; tc/sc; dry-run. primary (2h): hld: ticketing/hotel reservation">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 11</span>
+            <h3>10 Oct · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-11-dsa">
+            <span><b>DSA</b><br>Heaps — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-11-primary">
+            <span><b>Primary</b><br>HLD: Ticketing/Hotel Reservation</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="12" data-search="12 11 oct sun dsa (2h): graphs — 1–2 focused problems; tc/sc; dry-run. primary (2h): agentic ai: memory/conversation workflows">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 12</span>
+            <h3>11 Oct · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-12-dsa">
+            <span><b>DSA</b><br>Graphs — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-12-primary">
+            <span><b>Primary</b><br>Agentic AI: memory/conversation workflows</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="13" data-search="13 12 oct mon dsa (45m): dp — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: ticketing/hotel reservation + concurrency">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 13</span>
+            <h3>12 Oct · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-13-dsa">
+            <span><b>DSA</b><br>DP — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-13-primary">
+            <span><b>Primary</b><br>HLD: Ticketing/Hotel Reservation + concurrency</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="14" data-search="14 13 oct tue dsa (45m): greedy — 1–2 focused problems; tc/sc; dry-run. primary (45m): weekly review: hld recap + weak-topic list">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 14</span>
+            <h3>13 Oct · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-14-dsa">
+            <span><b>DSA</b><br>Greedy — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-14-primary">
+            <span><b>Primary</b><br>Weekly review: HLD recap + weak-topic list</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="15" data-search="15 14 oct wed dsa (45m): intervals — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: instagram – feed generation/fan-out">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 15</span>
+            <h3>14 Oct · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-15-dsa">
+            <span><b>DSA</b><br>Intervals — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-15-primary">
+            <span><b>Primary</b><br>HLD: Instagram – feed generation/fan-out</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="16" data-search="16 15 oct thu dsa (45m): mixed patterns — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: multi-agent workflows">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 16</span>
+            <h3>15 Oct · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-16-dsa">
+            <span><b>DSA</b><br>Mixed patterns — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-16-primary">
+            <span><b>Primary</b><br>Agentic AI: multi-agent workflows</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="17" data-search="17 16 oct fri dsa (45m): arrays + complexity — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: instagram – media storage/cdn + scaling">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 17</span>
+            <h3>16 Oct · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-17-dsa">
+            <span><b>DSA</b><br>Arrays + complexity — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-17-primary">
+            <span><b>Primary</b><br>HLD: Instagram – media storage/CDN + scaling</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="18" data-search="18 17 oct sat dsa (2h): hashing — 1–2 focused problems; tc/sc; dry-run. primary (2h): agentic ai: retrieval/knowledge assistants">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 18</span>
+            <h3>17 Oct · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-18-dsa">
+            <span><b>DSA</b><br>Hashing — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-18-primary">
+            <span><b>Primary</b><br>Agentic AI: retrieval/knowledge assistants</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="19" data-search="19 18 oct sun dsa (2h): two pointers — 1–2 focused problems; tc/sc; dry-run. primary (2h): hld: distributed task scheduler – scheduling + leader election">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 19</span>
+            <h3>18 Oct · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-19-dsa">
+            <span><b>DSA</b><br>Two pointers — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-19-primary">
+            <span><b>Primary</b><br>HLD: Distributed Task Scheduler – scheduling + leader election</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="20" data-search="20 19 oct mon dsa (45m): sliding window — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: hands-on mini workflow">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 20</span>
+            <h3>19 Oct · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-20-dsa">
+            <span><b>DSA</b><br>Sliding window — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-20-primary">
+            <span><b>Primary</b><br>Agentic AI: hands-on mini workflow</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="21" data-search="21 20 oct tue dsa (45m): linked lists — 1–2 focused problems; tc/sc; dry-run. primary (45m): weekly mock: one hld question">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 21</span>
+            <h3>20 Oct · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-21-dsa">
+            <span><b>DSA</b><br>Linked lists — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-21-primary">
+            <span><b>Primary</b><br>Weekly mock: one HLD question</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="22" data-search="22 21 oct wed dsa (45m): stacks/queues — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: scheduler – fault tolerance + delivery semantics">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 22</span>
+            <h3>21 Oct · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-22-dsa">
+            <span><b>DSA</b><br>Stacks/queues — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-22-primary">
+            <span><b>Primary</b><br>HLD: Scheduler – fault tolerance + delivery semantics</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="23" data-search="23 22 oct thu dsa (45m): binary search — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: event-driven behavior">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 23</span>
+            <h3>22 Oct · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-23-dsa">
+            <span><b>DSA</b><br>Binary search — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-23-primary">
+            <span><b>Primary</b><br>Agentic AI: event-driven behavior</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="24" data-search="24 23 oct fri dsa (45m): recursion — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: video streaming – processing + adaptive bitrate">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 24</span>
+            <h3>23 Oct · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-24-dsa">
+            <span><b>DSA</b><br>Recursion — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-24-primary">
+            <span><b>Primary</b><br>HLD: Video Streaming – processing + adaptive bitrate</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="25" data-search="25 24 oct sat dsa (2h): sorting — 1–2 focused problems; tc/sc; dry-run. primary (2h): agentic ai: project/module consolidation">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 25</span>
+            <h3>24 Oct · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-25-dsa">
+            <span><b>DSA</b><br>Sorting — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-25-primary">
+            <span><b>Primary</b><br>Agentic AI: project/module consolidation</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="26" data-search="26 25 oct sun dsa (2h): trees/bst — 1–2 focused problems; tc/sc; dry-run. primary (2h): hld: video streaming – cdn + object storage">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 26</span>
+            <h3>25 Oct · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-26-dsa">
+            <span><b>DSA</b><br>Trees/BST — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-26-primary">
+            <span><b>Primary</b><br>HLD: Video Streaming – CDN + object storage</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="27" data-search="27 26 oct mon dsa (45m): heaps — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: e-commerce – distributed transactions">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 27</span>
+            <h3>26 Oct · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-27-dsa">
+            <span><b>DSA</b><br>Heaps — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-27-primary">
+            <span><b>Primary</b><br>HLD: E-Commerce – distributed transactions</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="28" data-search="28 27 oct tue dsa (45m): graphs — 1–2 focused problems; tc/sc; dry-run. primary (45m): weekly review: hld mock">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 28</span>
+            <h3>27 Oct · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-28-dsa">
+            <span><b>DSA</b><br>Graphs — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-28-primary">
+            <span><b>Primary</b><br>Weekly review: HLD mock</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="29" data-search="29 28 oct wed dsa (45m): dp — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: e-commerce – saga + inventory consistency + payments">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 29</span>
+            <h3>28 Oct · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-29-dsa">
+            <span><b>DSA</b><br>DP — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-29-primary">
+            <span><b>Primary</b><br>HLD: E-Commerce – Saga + inventory consistency + payments</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="30" data-search="30 29 oct thu dsa (45m): greedy — 1–2 focused problems; tc/sc; dry-run. primary (45m): agentic ai: selected advanced modules">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 30</span>
+            <h3>29 Oct · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-30-dsa">
+            <span><b>DSA</b><br>Greedy — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-30-primary">
+            <span><b>Primary</b><br>Agentic AI: selected advanced modules</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="31" data-search="31 30 oct fri dsa (45m): intervals — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: proximity service – geospatial indexing + nearest neighbor">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 31</span>
+            <h3>30 Oct · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-31-dsa">
+            <span><b>DSA</b><br>Intervals — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-31-primary">
+            <span><b>Primary</b><br>HLD: Proximity Service – geospatial indexing + nearest neighbor</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="32" data-search="32 31 oct sat dsa (2h): mixed patterns — 1–2 focused problems; tc/sc; dry-run. primary (2h): lld: solid principles">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 32</span>
+            <h3>31 Oct · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-32-dsa">
+            <span><b>DSA</b><br>Mixed patterns — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-32-primary">
+            <span><b>Primary</b><br>LLD: SOLID principles</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="33" data-search="33 01 nov sun dsa (2h): arrays + complexity — 1–2 focused problems; tc/sc; dry-run. primary (2h): hld: tinder – matching/ranking/recommendation">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 33</span>
+            <h3>01 Nov · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-33-dsa">
+            <span><b>DSA</b><br>Arrays + complexity — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-33-primary">
+            <span><b>Primary</b><br>HLD: Tinder – matching/ranking/recommendation</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="34" data-search="34 02 nov mon dsa (45m): hashing — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: strategy + observer">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 34</span>
+            <h3>02 Nov · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-34-dsa">
+            <span><b>DSA</b><br>Hashing — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-34-primary">
+            <span><b>Primary</b><br>LLD: Strategy + Observer</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="35" data-search="35 03 nov tue dsa (45m): two pointers — 1–2 focused problems; tc/sc; dry-run. primary (45m): weekly mock: hld + lld pattern coding">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 35</span>
+            <h3>03 Nov · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-35-dsa">
+            <span><b>DSA</b><br>Two pointers — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-35-primary">
+            <span><b>Primary</b><br>Weekly mock: HLD + LLD pattern coding</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="36" data-search="36 04 nov wed dsa (45m): sliding window — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: uber – dispatch/location tracking">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 36</span>
+            <h3>04 Nov · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-36-dsa">
+            <span><b>DSA</b><br>Sliding window — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-36-primary">
+            <span><b>Primary</b><br>HLD: Uber – dispatch/location tracking</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="37" data-search="37 05 nov thu dsa (45m): linked lists — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: state + command">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 37</span>
+            <h3>05 Nov · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-37-dsa">
+            <span><b>DSA</b><br>Linked lists — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-37-primary">
+            <span><b>Primary</b><br>LLD: State + Command</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="38" data-search="38 06 nov fri dsa (45m): stacks/queues — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: uber – event-driven architecture + state management">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 38</span>
+            <h3>06 Nov · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-38-dsa">
+            <span><b>DSA</b><br>Stacks/queues — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-38-primary">
+            <span><b>Primary</b><br>HLD: Uber – event-driven architecture + state management</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="39" data-search="39 07 nov sat dsa (2h): binary search — 1–2 focused problems; tc/sc; dry-run. primary (2h): lld: factory + abstract factory + singleton">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 39</span>
+            <h3>07 Nov · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-39-dsa">
+            <span><b>DSA</b><br>Binary search — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-39-primary">
+            <span><b>Primary</b><br>LLD: Factory + Abstract Factory + Singleton</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="40" data-search="40 08 nov sun dsa (2h): recursion — 1–2 focused problems; tc/sc; dry-run. primary (2h): hld: twitter – massive fan-out + hot partitions">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 40</span>
+            <h3>08 Nov · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-40-dsa">
+            <span><b>DSA</b><br>Recursion — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-40-primary">
+            <span><b>Primary</b><br>HLD: Twitter – massive fan-out + hot partitions</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="41" data-search="41 09 nov mon dsa (45m): sorting — 1–2 focused problems; tc/sc; dry-run. primary (45m): weekly review: lld pattern drill">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 41</span>
+            <h3>09 Nov · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-41-dsa">
+            <span><b>DSA</b><br>Sorting — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-41-primary">
+            <span><b>Primary</b><br>Weekly review: LLD pattern drill</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="42" data-search="42 10 nov tue dsa (45m): trees/bst — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: twitter – feed scalability + celebrity problem; full hld recap">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 42</span>
+            <h3>10 Nov · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-42-dsa">
+            <span><b>DSA</b><br>Trees/BST — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-42-primary">
+            <span><b>Primary</b><br>HLD: Twitter – feed scalability + celebrity problem; full HLD recap</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="43" data-search="43 11 nov wed dsa (45m): heaps — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: distributed job scheduler + library management system">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 43</span>
+            <h3>11 Nov · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-43-dsa">
+            <span><b>DSA</b><br>Heaps — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-43-primary">
+            <span><b>Primary</b><br>LLD: Distributed Job Scheduler + Library Management System</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="44" data-search="44 12 nov thu dsa (45m): graphs — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: movie booking system + concurrency">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 44</span>
+            <h3>12 Nov · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-44-dsa">
+            <span><b>DSA</b><br>Graphs — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-44-primary">
+            <span><b>Primary</b><br>LLD: Movie Booking System + concurrency</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="45" data-search="45 13 nov fri dsa (45m): dp — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: car rental system">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 45</span>
+            <h3>13 Nov · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-45-dsa">
+            <span><b>DSA</b><br>DP — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-45-primary">
+            <span><b>Primary</b><br>LLD: Car Rental System</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="46" data-search="46 14 nov sat dsa (2h): greedy — 1–2 focused problems; tc/sc; dry-run. primary (2h): lld: parking lot + pattern mapping">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 46</span>
+            <h3>14 Nov · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-46-dsa">
+            <span><b>DSA</b><br>Greedy — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-46-primary">
+            <span><b>Primary</b><br>LLD: Parking Lot + pattern mapping</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="47" data-search="47 15 nov sun dsa (2h): intervals — 1–2 focused problems; tc/sc; dry-run. primary (2h): lld: inventory management + ride sharing">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 47</span>
+            <h3>15 Nov · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-47-dsa">
+            <span><b>DSA</b><br>Intervals — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-47-primary">
+            <span><b>Primary</b><br>LLD: Inventory Management + Ride Sharing</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="48" data-search="48 16 nov mon dsa (45m): mixed patterns — 1–2 focused problems; tc/sc; dry-run. primary (45m): weekly mock: lld design">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 48</span>
+            <h3>16 Nov · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-48-dsa">
+            <span><b>DSA</b><br>Mixed patterns — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-48-primary">
+            <span><b>Primary</b><br>Weekly mock: LLD design</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="49" data-search="49 17 nov tue dsa (45m): arrays + complexity — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: rate limiter + algorithms/encapsulation">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 49</span>
+            <h3>17 Nov · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-49-dsa">
+            <span><b>DSA</b><br>Arrays + complexity — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-49-primary">
+            <span><b>Primary</b><br>LLD: Rate Limiter + algorithms/encapsulation</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="50" data-search="50 18 nov wed dsa (45m): hashing — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: snake and ladders + elevator system">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 50</span>
+            <h3>18 Nov · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-50-dsa">
+            <span><b>DSA</b><br>Hashing — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-50-primary">
+            <span><b>Primary</b><br>LLD: Snake and Ladders + Elevator System</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="51" data-search="51 19 nov thu dsa (45m): two pointers — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: vending machine + state transitions">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 51</span>
+            <h3>19 Nov · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-51-dsa">
+            <span><b>DSA</b><br>Two pointers — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-51-primary">
+            <span><b>Primary</b><br>LLD: Vending Machine + state transitions</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="52" data-search="52 20 nov fri dsa (45m): sliding window — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: uml-first design + concurrency/race-condition drill">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 52</span>
+            <h3>20 Nov · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-52-dsa">
+            <span><b>DSA</b><br>Sliding window — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-52-primary">
+            <span><b>Primary</b><br>LLD: UML-first design + concurrency/race-condition drill</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="53" data-search="53 21 nov sat dsa (2h): linked lists — 1–2 focused problems; tc/sc; dry-run. primary (2h): agentic ai: end-to-end agent workflow">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 53</span>
+            <h3>21 Nov · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-53-dsa">
+            <span><b>DSA</b><br>Linked lists — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-53-primary">
+            <span><b>Primary</b><br>Agentic AI: end-to-end agent workflow</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="54" data-search="54 22 nov sun dsa (2h): stacks/queues — 1–2 focused problems; tc/sc; dry-run. primary (2h): agentic ai: multi-agent/tool-using workflow + code review">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 54</span>
+            <h3>22 Nov · Sun</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-54-dsa">
+            <span><b>DSA</b><br>Stacks/queues — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-54-primary">
+            <span><b>Primary</b><br>Agentic AI: multi-agent/tool-using workflow + code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="55" data-search="55 23 nov mon dsa (45m): binary search — 1–2 focused problems; tc/sc; dry-run. primary (45m): system design mixed mock: hld + lld">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 55</span>
+            <h3>23 Nov · Mon</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-55-dsa">
+            <span><b>DSA</b><br>Binary search — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-55-primary">
+            <span><b>Primary</b><br>System design mixed mock: HLD + LLD</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="56" data-search="56 24 nov tue dsa (45m): recursion — 1–2 focused problems; tc/sc; dry-run. primary (45m): dsa mixed set + error-log revision">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 56</span>
+            <h3>24 Nov · Tue</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-56-dsa">
+            <span><b>DSA</b><br>Recursion — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-56-primary">
+            <span><b>Primary</b><br>DSA mixed set + error-log revision</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="57" data-search="57 25 nov wed dsa (45m): sorting — 1–2 focused problems; tc/sc; dry-run. primary (45m): hld: weakest 2 designs — redesign from scratch">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 57</span>
+            <h3>25 Nov · Wed</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-57-dsa">
+            <span><b>DSA</b><br>Sorting — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-57-primary">
+            <span><b>Primary</b><br>HLD: weakest 2 designs — redesign from scratch</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="58" data-search="58 26 nov thu dsa (45m): trees/bst — 1–2 focused problems; tc/sc; dry-run. primary (45m): lld: weakest 2 designs — redesign from scratch">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 58</span>
+            <h3>26 Nov · Thu</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-58-dsa">
+            <span><b>DSA</b><br>Trees/BST — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-58-primary">
+            <span><b>Primary</b><br>LLD: weakest 2 designs — redesign from scratch</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="59" data-search="59 27 nov fri dsa (45m): heaps — 1–2 focused problems; tc/sc; dry-run. primary (45m): full interview simulation: dsa + hld + lld + agentic ai explanation">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 59</span>
+            <h3>27 Nov · Fri</h3>
+          </div>
+          <span class="hours">1.5h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-59-dsa">
+            <span><b>DSA</b><br>Heaps — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-59-primary">
+            <span><b>Primary</b><br>Full interview simulation: DSA + HLD + LLD + Agentic AI explanation</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="day-card" data-day="60" data-search="60 28 nov sat dsa (2h): graphs — 1–2 focused problems; tc/sc; dry-run. primary (2h): final review: weak areas + next 30-day maintenance plan">
+        <div class="day-head">
+          <div>
+            <span class="day-number">DAY 60</span>
+            <h3>28 Nov · Sat</h3>
+          </div>
+          <span class="hours">4h</span>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-60-dsa">
+            <span><b>DSA</b><br>Graphs — 1–2 focused problems; TC/SC; dry-run.</span>
+          </label>
+        </div>
+        <div class="task">
+          <label>
+            <input type="checkbox" data-key="day-60-primary">
+            <span><b>Primary</b><br>Final review: weak areas + next 30-day maintenance plan</span>
+          </label>
+        </div>
+      </article>
+    
+  </div>
+</section>
+
+<section id="hld">
+  <div class="section-title"><div><h2>HLD — 10 Must-Do Designs</h2><p>Interview-depth practice from the roadmap.</p></div></div>
+  <div class="design-grid">
+    
+      <article class="design-card">
+        <div class="number">1</div>
+        <div>
+          <h3>Messaging App</h3>
+          <p class="concepts">Real-time systems; WebSockets; delivery guarantees; distributed coordination</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-1">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">2</div>
+        <div>
+          <h3>Ticketing System / Hotel Reservation</h3>
+          <p class="concepts">Concurrency control; distributed locking; idempotency</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-2">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">3</div>
+        <div>
+          <h3>Instagram</h3>
+          <p class="concepts">Fan-out strategies; feed generation; media storage/CDN</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-3">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">4</div>
+        <div>
+          <h3>Distributed Task Scheduler</h3>
+          <p class="concepts">Distributed scheduling; leader election; fault tolerance; exactly-once vs at-least-once execution</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-4">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">5</div>
+        <div>
+          <h3>Video Streaming (YouTube)</h3>
+          <p class="concepts">Video processing; adaptive bitrate streaming; CDN; object storage</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-5">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">6</div>
+        <div>
+          <h3>E-Commerce Platform</h3>
+          <p class="concepts">Distributed transactions; Saga; inventory consistency; payment workflows</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-6">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">7</div>
+        <div>
+          <h3>Proximity Service</h3>
+          <p class="concepts">Geospatial indexing; Geohash/H3; nearest-neighbor search</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-7">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">8</div>
+        <div>
+          <h3>Tinder</h3>
+          <p class="concepts">Matching; recommendation; ranking; location-based filtering</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-8">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">9</div>
+        <div>
+          <h3>Uber</h3>
+          <p class="concepts">Real-time dispatch; location tracking; event-driven architecture; state management</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-9">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">10</div>
+        <div>
+          <h3>Twitter</h3>
+          <p class="concepts">Massive fan-out; hot partitions; feed scalability; celebrity problem</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="hld-10">
+            <span>Complete 30–45 min interview design + notes</span>
+          </label>
+        </div>
+      </article>
+    
+  </div>
+</section>
+
+<section id="lld">
+  <div class="section-title"><div><h2>LLD — Must-Do Designs</h2><p>Patterns, UML, extensibility, concurrency and code review.</p></div></div>
+  <div class="design-grid">
+    
+      <article class="design-card">
+        <div class="number">1</div>
+        <div>
+          <h3>Distributed Job Scheduler</h3>
+          <p class="concepts">Strategy; Command; Observer</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-1">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">2</div>
+        <div>
+          <h3>Library Management System</h3>
+          <p class="concepts">Observer; State; Association/Aggregation</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-2">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">3</div>
+        <div>
+          <h3>Movie Booking System</h3>
+          <p class="concepts">Concurrency; State Machine; Factory; Payment System</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-3">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">4</div>
+        <div>
+          <h3>Car Rental System</h3>
+          <p class="concepts">Strategy; State; Factory</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-4">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">5</div>
+        <div>
+          <h3>Parking Lot</h3>
+          <p class="concepts">Factory; Abstract Factory; Strategy; Singleton</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-5">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">6</div>
+        <div>
+          <h3>Inventory Management System</h3>
+          <p class="concepts">Observer; Strategy; State</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-6">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">7</div>
+        <div>
+          <h3>Ride Sharing Application</h3>
+          <p class="concepts">Strategy; Observer; State; Calculations</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-7">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">8</div>
+        <div>
+          <h3>Rate Limiter</h3>
+          <p class="concepts">Strategy; Algorithms and Encapsulation</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-8">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">9</div>
+        <div>
+          <h3>Snake and Ladders</h3>
+          <p class="concepts">Factory; Strategy; State</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-9">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">10</div>
+        <div>
+          <h3>Elevator System</h3>
+          <p class="concepts">State; Strategy; Command</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-10">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+      <article class="design-card">
+        <div class="number">11</div>
+        <div>
+          <h3>Vending Machine</h3>
+          <p class="concepts">State Pattern; State Transition</p>
+          <label class="inline-check">
+            <input type="checkbox" data-key="lld-11">
+            <span>UML → basic model → extensibility → concurrency → code review</span>
+          </label>
+        </div>
+      </article>
+    
+  </div>
+</section>
+
+<section id="agentic">
+  <div class="section-title"><div><h2>Agentic AI</h2><p>Use one primary course and the others selectively to fill gaps.</p></div></div>
+  <div class="panel">
+    <label class="check-row"><input type="checkbox" data-key="agentic-0"><span><b>Python crash course</b> — Python Crash Course on YouTube (any suitable one)</span></label><label class="check-row"><input type="checkbox" data-key="agentic-1"><span><b>Primary course</b> — Krish Naik – Complete Agentic AI Bootcamp with LangGraph and LangChain</span></label><label class="check-row"><input type="checkbox" data-key="agentic-2"><span><b>11-hour course</b> — Krish Naik – 11 hrs Free YouTube Course</span></label><label class="check-row"><input type="checkbox" data-key="agentic-3"><span><b>24-hour course</b> — Free Agentic AI Complete A2Z Course – 24 hrs</span></label>
+    <div class="note"><b>Important:</b> the roadmap includes multiple Agentic AI courses. Treat the Krish Naik bootcamp as a large reference rather than a requirement to finish every minute in 60 days. Use the shorter YouTube material for targeted revision and alternate explanations.</div>
+  </div>
+</section>
+
+<section id="checklists">
+  <div class="section-title"><div><h2>Interview Checklists</h2><p>Use these during mocks and actual interviews.</p></div></div>
+  <div class="two-col">
+    <article class="check-card"><h3>DSA rounds</h3><label class="check-row"><input type="checkbox" data-key="check-dsa-rounds-0"><span>Start with brute force.</span></label><label class="check-row"><input type="checkbox" data-key="check-dsa-rounds-1"><span>Discuss time and space complexity.</span></label><label class="check-row"><input type="checkbox" data-key="check-dsa-rounds-2"><span>Clearly explain why brute force breaks at high scale/traffic.</span></label><label class="check-row"><input type="checkbox" data-key="check-dsa-rounds-3"><span>Show the optimization path from brute force to the final solution.</span></label><label class="check-row"><input type="checkbox" data-key="check-dsa-rounds-4"><span>Dry-run with the given input before submitting.</span></label></article><article class="check-card"><h3>HLD rounds</h3><label class="check-row"><input type="checkbox" data-key="check-hld-rounds-0"><span>Gather functional and non-functional requirements.</span></label><label class="check-row"><input type="checkbox" data-key="check-hld-rounds-1"><span>Do back-of-the-envelope estimations before detailed design.</span></label><label class="check-row"><input type="checkbox" data-key="check-hld-rounds-2"><span>Design the basic flow first, then make it extensible.</span></label><label class="check-row"><input type="checkbox" data-key="check-hld-rounds-3"><span>Discuss scaling impact and cross-region connections.</span></label><label class="check-row"><input type="checkbox" data-key="check-hld-rounds-4"><span>Do not rush into the design.</span></label><label class="check-row"><input type="checkbox" data-key="check-hld-rounds-5"><span>Keep interacting with the interviewer and involve them in decisions.</span></label></article><article class="check-card"><h3>LLD rounds</h3><label class="check-row"><input type="checkbox" data-key="check-lld-rounds-0"><span>Start with a UML diagram.</span></label><label class="check-row"><input type="checkbox" data-key="check-lld-rounds-1"><span>Do not ask excessive questions that let every requirement become a &#x27;yes&#x27;.</span></label><label class="check-row"><input type="checkbox" data-key="check-lld-rounds-2"><span>Start with a basic model, then make it scalable/extensible.</span></label><label class="check-row"><input type="checkbox" data-key="check-lld-rounds-3"><span>Explain concurrency management while coding.</span></label><label class="check-row"><input type="checkbox" data-key="check-lld-rounds-4"><span>Discuss race conditions and implement locking when required.</span></label><label class="check-row"><input type="checkbox" data-key="check-lld-rounds-5"><span>Keep naming precise and meaningful.</span></label></article>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>60-Day PBC Interview Roadmap · Progress is stored locally in this browser.</p>
+    <p><span class="kbd">GitHub Pages ready</span> · Single HTML file · No backend · No external libraries</p>
+  </div>
+</footer>
+
+<script>
+const STORAGE_KEY = "pbc-60-day-roadmap-v1";
+
+function allChecks() {
+  return Array.from(document.querySelectorAll('input[type="checkbox"][data-key]'));
+}
+
+function save() {
+  const state = {};
+  allChecks().forEach(cb => state[cb.dataset.key] = cb.checked);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  updateProgress();
+}
+
+function load() {
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch(e) {}
+  allChecks().forEach(cb => cb.checked = !!state[cb.dataset.key]);
+  updateProgress();
+}
+
+function updateProgress() {
+  const checks = allChecks();
+  const done = checks.filter(x => x.checked).length;
+  document.getElementById("doneCount").textContent = done;
+  document.getElementById("totalCount").textContent = checks.length;
+  const pct = checks.length ? Math.round(done / checks.length * 100) : 0;
+  document.getElementById("percent").textContent = pct + "%";
+  document.getElementById("overallBar").style.width = pct + "%";
+
+  let completeDays = 0;
+  document.querySelectorAll(".day-card").forEach(card => {
+    const boxes = card.querySelectorAll('input[type="checkbox"]');
+    const finished = boxes.length && Array.from(boxes).every(x => x.checked);
+    card.classList.toggle("done", finished);
+    if (finished) completeDays++;
+  });
+  document.getElementById("dayCount").textContent = completeDays + " / 60";
+}
+
+allChecks().forEach(cb => cb.addEventListener("change", save));
+
+function resetProgress() {
+  if (!confirm("Reset every checkbox and start from zero?")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  allChecks().forEach(cb => cb.checked = false);
+  updateProgress();
+}
+
+function filterDays() {
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  document.querySelectorAll(".day-card").forEach(card => {
+    card.classList.toggle("hidden", q && !card.dataset.search.includes(q));
+  });
+}
+
+function showOnlyIncomplete() {
+  document.querySelectorAll(".day-card").forEach(card => {
+    const boxes = Array.from(card.querySelectorAll('input[type="checkbox"]'));
+    const done = boxes.length && boxes.every(x => x.checked);
+    card.classList.toggle("hidden", done);
+  });
+}
+
+function showAllDays() {
+  document.querySelectorAll(".day-card").forEach(card => card.classList.remove("hidden"));
+  document.getElementById("search").value = "";
+}
+
+function exportProgress() {
+  const state = {};
+  allChecks().forEach(cb => state[cb.dataset.key] = cb.checked);
+  const blob = new Blob([JSON.stringify({version:1, exportedAt:new Date().toISOString(), state}, null, 2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "pbc-roadmap-progress.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function importProgress(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const obj = JSON.parse(reader.result);
+      const state = obj.state || obj;
+      allChecks().forEach(cb => cb.checked = !!state[cb.dataset.key]);
+      save();
+      alert("Progress imported.");
+    } catch(e) {
+      alert("That file does not contain valid roadmap progress.");
+    }
+  };
+  reader.readAsText(file);
+}
+
+load();
+</script>
+</body>
+</html>
